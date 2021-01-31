@@ -1,5 +1,5 @@
 # TAMUhack
-# Medico
+# MediCo
 ## Inspiration
 
 With the increase in the internet usage and cheaper data, much of the world is now online. This has a great impact on the health industry as people are searching online for cure and symptoms of diseases and also diagnosing themselves. Many cases of false diagnostics and cure have resulted in fatal injuries or adverse effects. If there is important information needed it is hidden behind a paywall and not easily accessible. In some cases drugs are not provided with their side effects and the patient has to go online to search them. Many of these people are new users in the world wide web.
