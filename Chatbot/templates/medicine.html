@@ -7,7 +7,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='styles/chatbot.css') }}">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  </head>
 
@@ -30,7 +30,7 @@
            </div>
 
            <div class="msg-text">
-             Hi, welcome to Medico!
+             Hi, welcome to Medico! Please enter the salt name of the medicine
            </div>
          </div>
        </div>
@@ -96,7 +96,7 @@
          console.log(rawText);
          console.log(data);
          const msgText = data;
-         appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+         setTimeout(function(){ appendMessage(BOT_NAME, BOT_IMG, "left", msgText); }, 1500);
        });
      }
 

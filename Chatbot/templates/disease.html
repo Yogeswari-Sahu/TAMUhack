@@ -7,7 +7,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='styles/chatbot.css') }}">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  </head>
 
@@ -15,13 +15,13 @@
    <section class="msger">
      <header class="msger-header">
        <div class="msger-header-title">
-         <i class="fas fa-prescription"></i> Disease Chatbot <i class="fas fa-prescription"></i>
+         <i class="fas fa-prescription-bottle-alt"></i> Disease Chatbot <i class="fas fa-prescription-bottle-alt"></i>
        </div>
      </header>
 
      <main class="msger-chat">
        <div class="msg left-msg">
-         <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"></div>
+         <div class="msg-img" style="background-image: url(https://img.icons8.com/fluent/96/000000/chatbot.png)"></div>
 
          <div class="msg-bubble">
            <div class="msg-info">
@@ -30,7 +30,7 @@
            </div>
 
            <div class="msg-text">
-             Hi, welcome to Medico!
+             Hi, welcome to Medico! Please ask your query regarding diseases and symptoms
            </div>
          </div>
        </div>
@@ -95,7 +95,8 @@
          console.log(rawText);
          console.log(data);
          const msgText = data;
-         appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+         setTimeout(function(){ appendMessage(BOT_NAME, BOT_IMG, "left", msgText); }, 1500);
+
        });
      }
 

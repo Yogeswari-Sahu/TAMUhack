@@ -5,6 +5,10 @@ from medicines_chatbot_query import ask_question_tfidf_medicine
 app = Flask(__name__)
 app.static_folder = 'static'
 
+@app.route("/")
+def home():
+    return render_template("index.html")
+
 @app.route("/disease")
 def disease_home():
     return render_template("disease.html")

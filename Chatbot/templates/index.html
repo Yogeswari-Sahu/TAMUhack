@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medico For People</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/font-awesome.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--banner-->
+  <section id="banner" class="banner">
+    <div class="bg-color">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+              <a class="navbar-brand" href="#">MediCo</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#banner">Home</a></li>
+                <li class=""><a href="#about">About</a></li>
+                <li class=""><a href="#vision">Vision</a></li>
+                <li class=""><a href="#chatbot">Services</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="banner-info">
+            <div class="banner-logo text-center">
+              MediCo
+            </div>
+            <div class="banner-text text-center">
+              <h1 class="white">A healthy outside starts from the Inside</h1>
+              <p>Healthcare at your desk!!</p>
+              <a href="#chatbot" class="btn btn-appoint">Let's get started</a>
+            </div>
+            <div class="overlay-detail text-center">
+              <a href="#about"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ banner-->
+
+  <div class="container">
+    <div class="about-us" id="about">
+      <div class="title">
+        <h1>About MediCo</h1>
+      </div>
+      <div class="content">
+        <p>With Medico we intend to create a platform which provides all important information in one place. Our chatbots are designed to give the user a seamless experience by providing concise information about the query. We believe no information should be hidden or tough to find. We have gathered all data needed by a patient in one place.</p>
+      </div>
+    </div>
+  </div>
+
+  <!--service-->
+  <section id="vision" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <h2 class="ser-title">Our Vision</h2>
+          <hr class="botm-line">
+          <p>As Anne Wilson Scdhaef has said, “Good health is not something we can buy. However, it can be an extremely valuable savings account.” We wish to light a beacon of hope in these tough times. No person should haggle to get important and necessary information. We all know how much pain in the neck finding the right information online is. With our platform we want to give it a new lease of life.</p>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-stethoscope"></i>
+            </div>
+            <div class="icon-info">
+              <h4>24 Hour Support</h4>
+              <p>Our portal is available 24x7 providing the users a platform where they can access all necessary information regarding diseases and drugs.</p>
+            </div>
+          </div>
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-heartbeat"></i>
+            </div>
+            <div class="icon-info">
+              <h4>Diseases</h4>
+              <p>We provide concize information regarding the diseases and their effects.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-ambulance"></i>
+            </div>
+            <div class="icon-info">
+              <h4>Symptoms</h4>
+              <p>We have information of all known symptoms related to the diseases.</p>
+            </div>
+          </div>
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-medkit"></i>
+            </div>
+            <div class="icon-info">
+              <h4>Medicine</h4>
+              <p>We have coherent interface which provides the user all known details and effects of the salt of the medicine.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ service-->
+  <!--cta-->
+  <div class="container" id="chatbot">
+    <div class="chatbots-title-upper">
+    <div class="chatbot-title">
+      <h1>Our Services</h1>
+    </div>
+  </div>
+        <div class="row">
+            <div class=" col-12 col-md-6">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/doctor.svg') }}" alt="">
+                    <!-- <h5>Heading</h5> -->
+                    <h3>General</h3>
+                    <br>
+                    <p>Talk to us regarding your general queries about diseases and their symptoms.</p>
+                    <a href="{{ url_for('disease_home') }}"><p class="card-btn">Click Here</p></a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/medicines.svg') }}" alt="">
+                    <!-- <h5>Heading</h5> -->
+                    <h3>Medicines</h3>
+                    <br>
+                    <p>Look up all information regarding your medicines and their salts.</p>
+                    <a href="{{ url_for('medicine_home') }}"><p class="card-btn">Click Here</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  <!--cta-->
+  <!--about-->
+  <footer id="footer">
+    <div class="footer-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            Made by Team Index.html in TAMUhack 2021
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+</body>
+
+</html>
