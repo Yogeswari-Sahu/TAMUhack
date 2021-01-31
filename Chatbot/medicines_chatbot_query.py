@@ -31,17 +31,17 @@ from textblob import TextBlob
 from wordcloud import WordCloud
 import sklearn
 import re
-import gensim 
+import gensim
 from gensim.parsing.preprocessing import remove_stopwords
-def clean_sentence(sentence, stopwords=False):   
+def clean_sentence(sentence, stopwords=False):
     sentence = sentence.lower().strip()
     sentence = re.sub(r'[^a-z0-9\s]', '', sentence)
-    
+
     if stopwords:
          sentence = remove_stopwords(sentence)
     return sentence
 
-def get_cleaned_sentences(df,stopwords=False):    
+def get_cleaned_sentences(df,stopwords=False):
     sents=df[["Questions"]];
     cleaned_sentences=[]
 
@@ -62,7 +62,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 stopwords_list = stopwords.words('english')
 lemmatizer = WordNetLemmatizer()
 def my_tokenizer(doc):
-    words = word_tokenize(doc)    
+    words = word_tokenize(doc)
     pos_tags = pos_tag(words)
     non_stopwords = [w for w in pos_tags if not w[0].lower() in stopwords_list]
     non_punctuation = [w for w in non_stopwords if not w[0] in string.punctuation]
@@ -86,7 +86,7 @@ tfidf_matrix = tfidf_vectorizer.fit_transform(tuple(df['Questions']))
 stopwords_list = stopwords.words('english')
 lemmatizer = WordNetLemmatizer()
 def my_tokenizer(doc):
-    words = word_tokenize(doc)    
+    words = word_tokenize(doc)
     pos_tags = pos_tag(words)
     non_stopwords = [w for w in pos_tags if not w[0].lower() in stopwords_list]
     non_punctuation = [w for w in non_stopwords if not w[0] in string.punctuation]
@@ -113,7 +113,7 @@ def getWordVec(word,model):
                 vec=[0]*len(samp);
         return (vec)
 
-def getPhraseEmbedding(phrase,embeddingmodel):                    
+def getPhraseEmbedding(phrase,embeddingmodel):
         samp=getWordVec('computer', embeddingmodel);
         vec=np.array([0]*len(samp));
         den=0;
@@ -130,11 +130,11 @@ sentence_words = [[word for word in document.split() ]
 dictionary = corpora.Dictionary(sentence_words)
 # bow_corpus = [dictionary.doc2bow(text) for text in sentence_words]
 
-def ask_question_tfidf(question):
+def ask_question_tfidf_medicine(question):
     query_vect = tfidf_vectorizer.transform([question])
     similarity = cosine_similarity(query_vect, tfidf_matrix)
     max_similarity = np.argmax(similarity, axis=None)
-    
+
     #print("*****TF-IDF MODEL*****\n")
     #print('Your question:\t\t', question)
     #print('Closest question found:\t', df.iloc[max_similarity]['Questions'])
