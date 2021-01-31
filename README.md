@@ -19,3 +19,9 @@ We went through various challenges. Data plays a major role in the digital world
 The data which we were able to gather gives a concise information about general health, diseases and drugs. We were able to provide a seamless user experience with appropriate information. The portal has been designed keeping in mind to provide accessibility to all. The User Interface has been integrated with a machine learning model which lays out a coherent interface for the users.
 ## What I learned
 We learnt how to make a question answering model after data processing using various NLP (Natural Language Processing ) techniques. In the same process, We learnt about how NLP plays a big role in today’s technology. Natural Language Processing(NLP), a field of AI, aims to understand the semantics and connotations of natural human languages. It focuses on extracting meaningful information from text and training data models based on the acquired insights. We learnt about the various libraries in the flask framework and under the Natural Language Toolkit. Moreover we also learnt about the pretrained Machine learning model TF-IDF and making a chatbot with the trained data.
+
+## Our Collaborators
+@hawk453 - Saksham Madan
+@Yogeswari-Sahu - Yogeswari Sahu
+@Akshat1903 - Akshat Gupta
+@Shubh0405 - Shubh Gupta
